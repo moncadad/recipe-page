@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  /* ## Layout - Mobile: 375px - Desktop: 1440px 
+
+ These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens. */
+
+  /* ## Colors */
+
+  /* primary */
+  --nutmeg: hsl(14, 45%, 36%);
+  --raspberry: hsl(332, 51%, 32%);
+  --raspberry-box: hsla(332, 51%, 32%, 0.1);
+  --raspberry-box--bg: hsla(332, 51%, 32%, 0.1);
+
+  /* neutral */
+  --White: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+
+  /* ##fonts */
+  --font-outfit: "Outfit", sans-serif; /* 400, 600, 700 */
+  --font-young: "Young Serif", serif; /* 400 */
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+body {
+  background-color: var(--eggshell);
+  font-family: var(--font-outfit);
+  font-size: 1rem;
+  color: var(--wenge-brown);
+}
+
+.card {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 84%;
+  padding-block: 1.5rem;
+}
+
+.card__title {
+  font-family: var(--font-young);
+  color: var(--dark-charcoal);
+  font-size: 2.25rem;
+  line-height: 1;
+}
+.card__brief {
+  line-height: 1.5;
+  padding-block: 1rem;
+}
+.section + .section {
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--raspberry-box);
+}
+.section#ingredients {
+  border-top: none;
+}
+.section__title {
+  color: var(--nutmeg);
+  font-family: var(--font-young);
+}
+
+.section__list {
+  padding-left: 1.5rem;
+}
+.section__list li {
+  padding-left: 0.5rem;
+}
+
+.section#prepTime {
+  background: var(--raspberry-box--bg);
+  border-radius: 1rem;
+  padding: 0 1.5rem;
+  border: none;
+}
+
+#prepTime .list__title {
+  color: var(--raspberry);
+  font-family: var(--font-outfit);
+  font-size: 1.25rem;
+}
+
+ul,
+ol {
+  line-height: 1.8;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+li::marker {
+  color: var(--nutmeg);
+}
+#prepTime li {
+  margin: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+li span {
+  font-weight: 700;
+}
+
+#nutrition .section__brief {
+  padding-block: 1rem;
+}
+
+#nutrition .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr + tr {
+  border-top: 2px solid var(--raspberry-box);
+}
+td {
+  padding: 0.8rem;
+}
+td.spec {
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    max-width: 740px;
+    margin: 5rem auto;
+    padding-block: 2.5rem;
+    border-radius: 1.5rem;
+  }
+  .wrapper {
+    max-width: 85%;
+  }
+
+  .card > .img__wrapper {
+    padding: 0 7.5%;
+  }
+  .card > .img__wrapper > img {
+    border-radius: 0.75rem;
+  }
+}
