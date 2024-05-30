@@ -25,7 +25,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ### Links
 
 - [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://creative-hummingbird-fd44bc.netlify.app/)
 
 ## My process
 
